@@ -1,3 +1,11 @@
+def generateStage(job) {
+    return {
+        stage("stage: ${job}") {
+            echo "This is ${job}."
+        }
+    }
+}
+
 void call(var){
 
     def jobs = ["JobA", "JobB", "JobC"]
@@ -6,13 +14,6 @@ void call(var){
         ["${it}" : generateStage(it)]
     }
      
-    def generateStage(job) {
-        return {
-            stage("stage: ${job}") {
-                    echo "This is ${job}."
-            }
-        }
-    }
 
 
     stage('parallel stage') {
