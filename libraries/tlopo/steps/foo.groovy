@@ -14,7 +14,7 @@ void call(var){
         ["${it}" : generateStage(it)]
     }
 */     
-    def p = "step1": { echo "step1" }, "step2": { "echo step2" }
+    def p = { "step1": { echo "step1" }, "step2": { "echo step2" } }
   
     parallel p
 
