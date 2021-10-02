@@ -15,27 +15,24 @@ void call(var){
     }
 */     
 
-/*
+
     stage('parallel stage') {
         steps {
-            script {
-                parallel {
-                    stage('JobA') {
-                        steps {
-                            echo 'JobA'
-                        }
+            parallel {
+                stage('JobA') {
+                    steps {
+                        echo 'JobA'
                     }
-                    stage('JobB') {
-                        steps {
-                            echo 'JobB'
-                        }
+                }
+                stage('JobB') {
+                    steps {
+                        echo 'JobB'
                     }
                 }
             }
         }
     }
-*/
-  stage("I am foo, received ${var}") {
-    echo "I am foo and received ${var}"
-  }
+    stage("I am foo, received ${var}") {
+        echo "I am foo and received ${var}"
+    }
 }
