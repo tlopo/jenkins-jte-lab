@@ -18,8 +18,11 @@ void call(var){
 //    parallel "step1": { echo "step1" }, "step2": { "echo step2" }
   
     def p = [:]
-    p['step1'] = { echo 'step1' }
-    p['step2'] = { echo 'step2' }
+
+    var.each {
+        p[it] = { echo "${it]"}
+    }
+
     parallel p 
 
     stage("I am foo, received ${var}") {
