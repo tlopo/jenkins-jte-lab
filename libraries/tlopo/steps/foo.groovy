@@ -20,7 +20,7 @@ void call(var){
     def p = [:]
 
     var.each {
-        p[it] = { echo "${it]"}
+        p[it] = { echo "${it}" }
     }
 
     parallel p 
