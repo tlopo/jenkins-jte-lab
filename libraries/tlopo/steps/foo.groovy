@@ -15,7 +15,7 @@ void call(var){
     }
 */     
 
-
+/*
     stage('parallel stage') {
         steps {
             script {
@@ -34,4 +34,8 @@ void call(var){
             }
         }
     }
+*/
+  stage("I am foo, received ${var}") {
+    echo "I am foo and received ${var}"
+  }
 }
