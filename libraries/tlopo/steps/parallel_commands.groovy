@@ -11,11 +11,11 @@ def getParallel(var) {
     return p
 }
 
-void call(){
+void call(cmds){
     node {
          /*def v = new File('parallel_commands.yml').getText()
          echo "V: ${v}"
          parallel getParallel(v)*/
-        echo 'done'
+        echo "CMDS: ${cmds}"
     }
 }
