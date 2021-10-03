@@ -4,6 +4,7 @@ String call(cmd){
         echo "Running ${cmd}"
         node {
             out = sh(script: cmd, returnStdout: true)
+            echo "OUT: ${out}"
         }
     }
     return out
