@@ -10,11 +10,7 @@ def getParallel(var) {
     return p
 }
 
-void call(var){
-
+void call(){
+    var = readFile('parallel_commands.yml')
     parallel getParallel(var) 
-
-    stage("I am foo, received ${var}") {
-        echo "I am foo and received ${var}"
-    }
 }
