@@ -1,4 +1,4 @@
-void call(cmd){
+String call(cmd){
     stage('Generating Parallel Commands') {
         echo "Running ${cmd}"
         node {

@@ -13,8 +13,9 @@ def getParallel(var) {
 
 void call(){
     node {
-         def v = new File('parallel_commands.yml').getText()
+         /*def v = new File('parallel_commands.yml').getText()
          echo "V: ${v}"
-         parallel getParallel(v)
+         parallel getParallel(v)*/
+        echo 'done'
     }
 }
