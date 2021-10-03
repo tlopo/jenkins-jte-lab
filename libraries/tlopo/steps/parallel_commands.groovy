@@ -12,7 +12,7 @@ def getParallel(var) {
 
 void call(){
     node {
-         readFile('parallel_commands.yml')
+         def v = readFile('parallel_commands.yml')
         //parallel getParallel(var)
     }
 }
