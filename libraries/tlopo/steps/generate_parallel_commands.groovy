@@ -1,8 +1,9 @@
 String call(cmd){
+    def out = ''
     stage('Generating Parallel Commands') {
         echo "Running ${cmd}"
         node {
-            def out = sh(script: cmd, returnStdout: true)
+            out = sh(script: cmd, returnStdout: true)
         }
     }
     return out
