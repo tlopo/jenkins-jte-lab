@@ -3,7 +3,7 @@ def getParallel(cmds) {
 
     def p = [:]
 
-    var.each {
+    cmds.each {
         p[it.name] = { echo "--> ${it.cmd}" }
     }
 
