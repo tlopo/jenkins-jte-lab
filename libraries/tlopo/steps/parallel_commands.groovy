@@ -1,5 +1,5 @@
 def getParallel(cmds) {
-    cmds = readYaml(cmds)
+    cmds = readYaml(text: cmds)
 
     def p = [:]
 
