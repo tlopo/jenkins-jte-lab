@@ -4,7 +4,7 @@ def getParallel(cmds) {
     def p = [:]
 
     cmds.each {
-        p[it.name] = { echo "--> ${it.cmd}" }
+        p[it.name] = { sh it.cmd }
     }
 
     return p
