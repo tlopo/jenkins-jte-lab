@@ -10,6 +10,11 @@ def getParallel(cmds) {
     return p
 }
 
+/*
+* It expects a JSON/YAML string wiht the following schema: 
+* [{"name","string", "cmd": "string"}..]
+*/
+
 void call(cmds){
     node {
         parallel getParallel(cmds)
