@@ -3,6 +3,8 @@ String call(cmd){
         echo "Running ${cmd}"
         node {
             sh "${cmd} > parallel_commands.yml"
+            def out = fileRead('parallel_commands.yml')
         }
     }
+    return out
 }
