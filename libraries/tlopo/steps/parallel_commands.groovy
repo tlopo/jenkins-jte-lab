@@ -1,6 +1,5 @@
-def getParallel(var) {
-    echo "Got: ${var}"
-    var = readYaml(var)
+def getParallel(cmds) {
+    cmds = readYaml(cmds)
 
     def p = [:]
 
@@ -13,9 +12,6 @@ def getParallel(var) {
 
 void call(cmds){
     node {
-         /*def v = new File('parallel_commands.yml').getText()
-         echo "V: ${v}"
-         parallel getParallel(v)*/
-        echo "CMDS: ${cmds}"
+        parallel getParallel(cmds)
     }
 }
