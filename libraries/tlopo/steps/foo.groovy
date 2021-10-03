@@ -1,7 +1,7 @@
 def getParallel(var) {
     def p = [:]
     var.each {
-        p[it] = { echo "${it}" }
+        p[it] = { echo "--> ${it}" }
     }
     return p
 }
